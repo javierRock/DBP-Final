@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Empresariales</title>
+    <link rel="stylesheet" href="inversion_liquidez.css">
+</head>
+<body>
+    <main>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSIjRkZENzAwIi8+Cjwvc3ZnPgo=" alt="Banco de Bogotá" class="logo">
+                <span class="brand-text">Banco de Bogotá</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="menu-item" data-menu="personas">
+                    <span>Personas</span>
+                </div>
+                <div class="menu-item active" data-menu="empresas">
+                    <span>Empresas</span>
+                </div>
+            </div>
+            
+            <div class="navbar-actions">
+                <span class="customer-service">Atención al cliente</span>
+                <button class="login-btn">
+                    <span>Ingresar</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-content">
+                <!-- Personas Content -->
+                <div class="menu-content" data-content="personas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>AHORRAR E INVERTIR</h4>
+                                <ul>
+                                    <li><a href="#">Cuentas de ahorro ›</a></li>
+                                    <li><a href="#">Cuenta corriente ›</a></li>
+                                    <li><a href="#">CDT e inversión ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>SOLUCIONES DE CRÉDITO</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                    <li><a href="#">Créditos ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>TRANSFERENCIAS INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Giros internacionales y remesas › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                                <h4>PROTÉGETE</h4>
+                                <ul>
+                                    <li><a href="#">Seguros y asistencias ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empresas Content -->
+                <div class="menu-content" data-content="empresas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>SOLUCIONES PARA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Productos de crédito ›</a></li>
+                                    <li><a href="#">Pagos y recaudos ›</a></li>
+                                    <li><a href="#">Cuentas e inversión ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                    <li><a href="#">Soluciones de logística ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>GESTIONA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                </ul>
+                                <h4>OPERACIONES INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Comercio exterior › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Divisas y derivados › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Giros internacionales › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category digital-access">
+                                <h4>Accesos digitales</h4>
+                                <ul>
+                                    <li><a href="#">Transacciones Empresas ›</a></li>
+                                    <li><a href="#">Portal de Libranzas ›</a></li>
+                                    <li><a href="#">Soluciones digitales ›</a></li>
+                                    <li><a href="#">Uso de Portal Negocios ›</a></li>
+                                    <li><a href="#">Plataforma Factoring ›</a></li>
+                                    <li><a href="#">Recaudo Verde ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atención al Cliente Content -->
+                <div class="menu-content" data-content="atencion">
+                    <div class="products-section">
+                        <h3>Atención al cliente</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>ATENCIÓN ASISTIDA</h4>
+                                <ul>
+                                    <li><a href="#">Servílínea ›</a></li>
+                                    <li><a href="#">WhatsApp › <span class="badge personal">Personal</span></a></li>
+                                    <li><a href="#">Peticiones, quejas y reclamos › <span class="badge personal">Personal</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>CANALES</h4>
+                                <ul>
+                                    <li><a href="#">Digitales ›</a></li>
+                                    <li><a href="#">Presenciales ›</a></li>
+                                    <li><a href="#">Disponibilidad de canales ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>MÁS AYUDAS</h4>
+                                <ul>
+                                    <li><a href="#">Preguntas frecuentes ›</a></li>
+                                    <li><a href="#">Protección al consumidor ›</a></li>
+                                    <li><a href="#">Defensor del consumidor ›</a></li>
+                                    <li><a href="#">Seguridad bancaria ›</a></li>
+                                    <li><a href="#">Línea ética ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Sección Hero - Inversión y Liquidez -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">SOLUCIONES PARA EMPRESAS</span>
+                <h1 class="hero-title">Inversión y liquidez</h1>
+                <p class="hero-description">
+                    La eficiencia en el manejo de liquidez e inversiones con servicios especializados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestros Productos -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros productos</h2>
+            <p class="section-description">
+                El portafolio de productos y servicios que tu empresa necesita.
+            </p>
+            
+            <!-- Navegación de pestañas -->
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-tab="cuenta-corriente">Cuenta corriente</button>
+                <button class="tab-btn" data-tab="cdt">CDT</button>
+                <button class="tab-btn" data-tab="fiducias">Fiducias</button>
+                <button class="tab-btn" data-tab="otros-productos">Otros productos</button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            <div class="tabs-content">
+                <!-- Pestaña Cuenta Corriente -->
+                <div id="cuenta-corriente" class="tab-content active">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M14 2V8H20" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M16 13H8" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M16 17H8" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M10 9H9H8" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Cuenta corriente empresas pequeñas</h3>
+                            <p class="product-description">
+                                Se adapta a las necesidades financieras de tu negocio.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 7H5C3.89543 7 3 7.89543 3 9V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V9C21 7.89543 20.1046 7 19 7Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M7 7V5C7 4.46957 7.21071 3.96086 7.58579 3.58579C7.96086 3.21071 8.46957 3 9 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V7" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Cuenta corriente grandes empresas</h3>
+                            <p class="product-description">
+                                Aplica para empresas con más de 20.000 millones de pesos en ventas anuales.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Traslado electrónico de saldos</h3>
+                            <p class="product-description">
+                                Centraliza los saldos en una sola cuenta de forma automática.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestaña CDT -->
+                <div id="cdt" class="tab-content">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7V17C2 17.5304 2.21071 18.0391 2.58579 18.4142C2.96086 18.7893 3.46957 19 4 19H20C20.5304 19 21.0391 18.7893 21.4142 18.4142C21.7893 18.0391 22 17.5304 22 17V7L12 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M9 13H15" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M9 16H15" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">CDT confianza</h3>
+                            <p class="product-description">
+                                Cuidamos tus recursos para verlos crecer.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M14 2V8H20" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">CDT especial</h3>
+                            <p class="product-description">
+                                Invierte y elige en qué momento recibes los intereses.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 7H5C3.89543 7 3 7.89543 3 9V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V9C21 7.89543 20.1046 7 19 7Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M7 7V5C7 4.46957 7.21071 3.96086 7.58579 3.58579C7.96086 3.21071 8.46957 3 9 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V7" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">CDT tradicional</h3>
+                            <p class="product-description">
+                                Invierte y aumenta tus recursos de manera segura.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestaña Fiducias -->
+                <div id="fiducias" class="tab-content">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7V17C2 17.5304 2.21071 18.0391 2.58579 18.4142C2.96086 18.7893 3.46957 19 4 19H20C20.5304 19 21.0391 18.7893 21.4142 18.4142C21.7893 18.0391 22 17.5304 22 17V7L12 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M9 13H15" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Fiducias de inversión</h3>
+                            <p class="product-description">
+                                Diversas alternativas para gestionar y maximizar recursos.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7V17C2 17.5304 2.21071 18.0391 2.58579 18.4142C2.96086 18.7893 3.46957 19 4 19H20C20.5304 19 21.0391 18.7893 21.4142 18.4142C21.7893 18.0391 22 17.5304 22 17V7L12 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M12 8V12L16 14" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Fiducias de administración</h3>
+                            <p class="product-description">
+                                Te ayudamos a gestionar activos, pagos, recaudos e inversiones.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M9 22V12H15V22" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Fiducias inmobiliarias</h3>
+                            <p class="product-description">
+                                Diferentes opciones para administrar y desarrollar proyectos inmobiliarios.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestaña Otros Productos -->
+                <div id="otros-productos" class="tab-content">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Cuenta de ahorros Superdía</h3>
+                            <p class="product-description">
+                                Recibe mejores rendimientos de acuerdo a tu ahorro promedio.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M14 2V8H20" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Remesas negocios</h3>
+                            <p class="product-description">
+                                Un servicio para consignar cheques girados a tu cuenta corriente.
+                            </p>
+                            <a href="#" class="product-link">Conoce más ›</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section class="portfolio-section">
+        <div class="portfolio-content">
+            <div class="portfolio-image">
+                <img src="imagenes/mujer trabajando en laptop.jpg" alt="Mujer trabajando con laptop">
+            </div>
+            <div class="portfolio-text">
+                <span class="portfolio-label">PORTAFOLIO</span>
+                <h2 class="portfolio-title">Obtén 15% de Descuento</h2>
+                <p class="portfolio-description">
+                    Te invitamos a que conozcas los beneficios que tenemos para tu empresa.
+                </p>
+                <a href="#" class="portfolio-btn">Saber más sobre el portafolio Pyme</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Otras Soluciones -->
+    <section class="solutions-section">
+        <div class="container">
+            <h2 class="section-title">Otras soluciones para tu empresa</h2>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7V17C2 17.5304 2.21071 18.0391 2.58579 18.4142C2.96086 18.7893 3.46957 19 4 19H20C20.5304 19 21.0391 18.7893 21.4142 18.4142C21.7893 18.0391 22 17.5304 22 17V7L12 2Z" stroke="#2563eb" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Recaudos y pagos</h3>
+                    <p class="solution-description">
+                        Encuentra varias opciones para optimizar las operaciones de tu empresa.
+                    </p>
+                    <a href="#" class="solution-link">Conoce más ›</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="#2563eb" stroke-width="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21" stroke="#2563eb" stroke-width="2"/>
+                            <line x1="12" y1="17" x2="12" y2="21" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Productos de crédito</h3>
+                    <p class="solution-description">
+                        Encuentra la opción de crédito que realmente necesita tu empresa.
+                    </p>
+                    <a href="#" class="solution-link">Conoce más ›</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M8 12L11 15L16 9" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Comercio internacional</h3>
+                    <p class="solution-description">
+                        Tenemos un portafolio de productos para negocios en el extranjero.
+                    </p>
+                    <a href="#" class="solution-link">Conoce más ›</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="#2563eb" stroke-width="2"/>
+                            <polyline points="7.5,4.21 12,6.81 16.5,4.21" stroke="#2563eb" stroke-width="2"/>
+                            <polyline points="7.5,19.79 7.5,14.6 3,12" stroke="#2563eb" stroke-width="2"/>
+                            <polyline points="21,12 16.5,14.6 16.5,19.79" stroke="#2563eb" stroke-width="2"/>
+                            <polyline points="12,22.08 12,17" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Logística</h3>
+                    <p class="solution-description">
+                        Cubrimos todas las operaciones de la cadena de abastecimiento.
+                    </p>
+                    <a href="#" class="solution-link">Conoce más ›</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="banco-footer">
+        <!-- Sección principal del app móvil -->
+        <div class="app-section">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <div class="app-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">B</span>
+                            </div>
+                        </div>
+                        <div class="app-text">
+                            <h3>App del Banco de Bogotá</h3>
+                            <p>Gestiona y consulta tus productos, envía dinero y solicita ayuda en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="app-downloads">
+                            <a href="#" class="app-btn app-store">
+                                <img src="imagenes/Descargar-AppStore.png" alt="Descargar en App Store" class="store-img">
+                            </a>
+                            <a href="#" class="app-btn google-play">
+                                <img src="imagenes/Descargar-Playstore.png" alt="Descargar en Google Play" class="store-img">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de enlaces principales -->
+        <div class="links-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Atención al cliente -->
+                    <div class="footer-column">
+                        <h4>Atención al cliente</h4>
+                        <ul>
+                            <li><a href="#">¿Necesitas ayuda?</a></li>
+                            <li><a href="#">Canales de atención</a></li>
+                            <li><a href="#">Protección al consumidor</a></li>
+                            <li><a href="#">Defensor del consumidor</a></li>
+                            <li><a href="#">Seguridad bancaria</a></li>
+                            <li><a href="#">Disponibilidad en canales</a></li>
+                            <li><a href="#">Autogestión</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="footer-column">
+                        <h4>Beneficios</h4>
+                        <ul>
+                            <li><a href="#">Alianzas Banco de Bogotá</a></li>
+                            <li><a href="#">Programa de lealtad Tuplus</a></li>
+                            <li><a href="#">Asistencias</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información -->
+                    <div class="footer-column">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Tasas y tarifas</a></li>
+                            <li><a href="#">Nuestras bancas</a></li>
+                            <li><a href="#">Sostenibilidad</a></li>
+                            <li><a href="#">Nuestra organización</a></li>
+                            <li><a href="#">Educación financiera</a></li>
+                            <li><a href="#">Pago de impuestos</a></li>
+                            <li><a href="#">Investigaciones económicas</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="#">Servílíneas</a></li>
+                            <li><a href="#">Oficinas</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                        
+                        <!-- Dropdown de Filiales y Agencias -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="filialesBtn">
+                                Filiales y Agencias
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="filialesDropdown">
+                                <a href="#">Banco de Bogotá Panamá</a>
+                                <a href="#">Banco de Bogotá Miami</a>
+                                <a href="#">Banco de Bogotá España</a>
+                                <a href="#">Fiduciaria Bogotá</a>
+                                <a href="#">Porvenir</a>
+                                <a href="#">Corficolombiana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de redes sociales y logos -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-content">
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos de entidades -->
+                    <div class="entity-logos">
+                        <div class="logo-item">
+                            <span class="logo-text">VIGILADO</span>
+                            <span class="logo-subtext">SUPERINTENDENCIA FINANCIERA DE COLOMBIA</span>
+                        </div>
+                        <div class="logo-item aval">
+                            <span class="logo-text">Grupo</span>
+                            <strong class="logo-brand">AVAL</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección final con el nombre del banco -->
+        <div class="bank-name-section">
+            <div class="container">
+                <h2 class="bank-name">Banco de Bogotá</h2>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </main>
+    <script src="inversion_liquidez.js"></script>
+</body>
+</html>

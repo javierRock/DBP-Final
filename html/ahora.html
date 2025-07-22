@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Bogotá</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background-color: white;
+            padding: 15px 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        
+        .logo::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #f59e0b, #ef4444, #3b82f6);
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-item {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-item::after {
+            content: '▼';
+            font-size: 12px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            border: 2px solid #1e40af;
+            color: #1e40af;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: #1e40af;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 40px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 20px;
+            background-color: #e5e7eb;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .digital-badge {
+            background-color: #dbeafe;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .service-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            line-height: 1.4;
+        }
+        
+        .toggle-btn {
+            background-color: #1e40af;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+            min-height: 160px;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        
+        .toggle-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+        
+        .hidden-service {
+            display: none;
+        }
+        
+        .hidden-service.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Banco de Bogotá</div>
+        <div class="nav-menu">
+            <a href="#" class="nav-item">Productos</a>
+            <a href="#" class="nav-item">Atención al cliente</a>
+        </div>
+        <div class="nav-buttons">
+            <a href="#" class="btn-secondary">
+                📱 Soluciones digitales
+            </a>
+            <a href="#" class="btn-primary">
+                👤 Ingresar
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="section-title">Elige lo que buscas para ti</h1>
+        
+        <div class="services-grid">
+            <!-- Servicios principales siempre visibles -->
+            <div class="service-card">
+                <a href="cuentasdeahorrro.html">
+                    <div class="digital-badge">Digital</div>
+                    <div class="service-icon">💳</div>
+                    <div class="service-title">Cuentas de ahorro</div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="tarjetadecredito.html">
+                    <div class="digital-badge">Digital</div>
+                    <div class="service-icon">💳</div>
+                    <div class="service-title">Tarjetas de crédito</div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="libreinvercion.html">
+                    <div class="digital-badge">Digital</div>
+                    <div class="service-icon">💰</div>
+                    <div class="service-title">Libre inversión</div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="nuestroscanales.html">
+                    <div class="service-icon">📱</div>
+                    <div class="service-title">Nuestros canales</div>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <a href="#">
+                    <div class="service-icon">📍</div>
+                    <div class="service-title">Puntos de atención</div>
+                </a>
+            </div>
+
+            <!-- Botón Ver más/Ver menos - posición 6 -->
+            <button class="toggle-btn" id="toggleBtn">
+                <div class="toggle-icon" id="toggleIcon">
+                    <span style="color: #1e40af; font-size: 16px;">▼</span>
+                </div>
+                <span id="toggleText">Ver más</span>
+            </button>
+
+            <!-- Servicios adicionales que se muestran/ocultan -->
+            <div class="service-card hidden-service">
+                <a href="#">
+                    <div class="service-icon">🎫</div>
+                    <div class="service-title">Turnos virtuales</div>
+                </a>
+            </div>
+
+            <div class="service-card hidden-service">
+                <a href="creditosdevivienda.html">
+                    <div class="digital-badge">Digital</div>
+                    <div class="service-icon">🏠</div>
+                    <div class="service-title">Crédito de vivienda</div>
+                </a>
+            </div>
+
+            <div class="service-card hidden-service">
+                <a href="#">
+                    <div class="service-icon">⚡</div>
+                    <div class="service-title">FacilPass</div>
+                </a>
+            </div>
+
+            <div class="service-card hidden-service">
+                <a href="#">
+                    <div class="service-icon">☕</div>
+                    <div class="service-title">Canal Cafetero</div>
+                </a>
+            </div>
+
+            <div class="service-card hidden-service">
+                <a href="creditosdevivienda.html">
+                    <div class="service-icon">🔒</div>
+                    <div class="service-title">Seguridad bancaria</div>
+                </a>
+            </div>
+
+            <div class="service-card hidden-service">
+                <a href="#">
+                    <div class="service-icon">📞</div>
+                    <div class="service-title">Contáctanos</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const toggleText = document.getElementById('toggleText');
+        const toggleIcon = document.getElementById('toggleIcon');
+        const hiddenServices = document.querySelectorAll('.hidden-service');
+        const servicesGrid = document.querySelector('.services-grid');
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', function() {
+            if (isExpanded) {
+                // Contraer - ocultar servicios adicionales y mover botón a posición 6
+                hiddenServices.forEach(service => {
+                    service.classList.remove('show');
+                });
+                
+                // Mover el botón de vuelta a la posición 6 (después del 5to servicio)
+                const fifthService = servicesGrid.children[4]; // Puntos de atención (índice 4)
+                servicesGrid.insertBefore(toggleBtn, fifthService.nextSibling);
+                
+                toggleText.textContent = 'Ver más';
+                toggleIcon.classList.remove('rotated');
+                isExpanded = false;
+            } else {
+                // Expandir - mostrar servicios adicionales y mover botón al final
+                hiddenServices.forEach(service => {
+                    service.classList.add('show');
+                });
+                
+                // Mover el botón al final del grid (posición 12)
+                servicesGrid.appendChild(toggleBtn);
+                
+                toggleText.textContent = 'Ver menos';
+                toggleIcon.classList.add('rotated');
+                isExpanded = true;
+            }
+        });
+    </script>
+</body>
+</html>

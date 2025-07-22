@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banca Empresas</title>
+    <link rel="stylesheet" href="bancas-empresas.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSIjRkZENzAwIi8+Cjwvc3ZnPgo=" alt="Banco de Bogotá" class="logo">
+                <span class="brand-text">Banco de Bogotá</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="menu-item" data-menu="personas">
+                    <span>Personas</span>
+                </div>
+                <div class="menu-item active" data-menu="empresas">
+                    <span>Empresas</span>
+                </div>
+            </div>
+            
+            <div class="navbar-actions">
+                <span class="customer-service">Atención al cliente</span>
+                <button class="login-btn">
+                    <span>Ingresar</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-content">
+                <!-- Personas Content -->
+                <div class="menu-content" data-content="personas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>AHORRAR E INVERTIR</h4>
+                                <ul>
+                                    <li><a href="#">Cuentas de ahorro ›</a></li>
+                                    <li><a href="#">Cuenta corriente ›</a></li>
+                                    <li><a href="#">CDT e inversión ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>SOLUCIONES DE CRÉDITO</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                    <li><a href="#">Créditos ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>TRANSFERENCIAS INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Giros internacionales y remesas › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                                <h4>PROTÉGETE</h4>
+                                <ul>
+                                    <li><a href="#">Seguros y asistencias ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empresas Content -->
+                <div class="menu-content" data-content="empresas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>SOLUCIONES PARA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Productos de crédito ›</a></li>
+                                    <li><a href="#">Pagos y recaudos ›</a></li>
+                                    <li><a href="#">Cuentas e inversión ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                    <li><a href="#">Soluciones de logística ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>GESTIONA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                </ul>
+                                <h4>OPERACIONES INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Comercio exterior › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Divisas y derivados › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Giros internacionales › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category digital-access">
+                                <h4>Accesos digitales</h4>
+                                <ul>
+                                    <li><a href="#">Transacciones Empresas ›</a></li>
+                                    <li><a href="#">Portal de Libranzas ›</a></li>
+                                    <li><a href="#">Soluciones digitales ›</a></li>
+                                    <li><a href="#">Uso de Portal Negocios ›</a></li>
+                                    <li><a href="#">Plataforma Factoring ›</a></li>
+                                    <li><a href="#">Recaudo Verde ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atención al Cliente Content -->
+                <div class="menu-content" data-content="atencion">
+                    <div class="products-section">
+                        <h3>Atención al cliente</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>ATENCIÓN ASISTIDA</h4>
+                                <ul>
+                                    <li><a href="#">Servílínea ›</a></li>
+                                    <li><a href="#">WhatsApp › <span class="badge personal">Personal</span></a></li>
+                                    <li><a href="#">Peticiones, quejas y reclamos › <span class="badge personal">Personal</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>CANALES</h4>
+                                <ul>
+                                    <li><a href="#">Digitales ›</a></li>
+                                    <li><a href="#">Presenciales ›</a></li>
+                                    <li><a href="#">Disponibilidad de canales ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>MÁS AYUDAS</h4>
+                                <ul>
+                                    <li><a href="#">Preguntas frecuentes ›</a></li>
+                                    <li><a href="#">Protección al consumidor ›</a></li>
+                                    <li><a href="#">Defensor del consumidor ›</a></li>
+                                    <li><a href="#">Seguridad bancaria ›</a></li>
+                                    <li><a href="#">Línea ética ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Sección principal hero -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-label">PRODUCTOS PARA EMPRESAS</p>
+                <h1 class="hero-title">Banca empresas</h1>
+                <p class="hero-description">Accede a un mundo lleno de privilegios por ser nuestro cliente.</p>
+            </div>
+            <div class="hero-image">
+                <img src="imagenes/empresarios-pareja-conversando-de-inversion.jpg" alt="Profesionales de negocios trabajando con tablet" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios bancarios -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="services-title">Encuentra la banca para ti</h2>
+                <p class="services-subtitle">Nuestros productos están diseñados para apoyar la operación de tu empresa.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Banca microempresas -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca microempresas</h3>
+                    <p class="service-description">Un catálogo de productos para que tu empresa siga creciendo.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca internacional -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca internacional</h3>
+                    <p class="service-description">Te apoyamos en la estructuración de negocios en el exterior.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca pyme -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca pyme</h3>
+                    <p class="service-description">Facilitamos la financiación para pequeñas y medianas empresas.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca oficial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca oficial</h3>
+                    <p class="service-description">Somos aliados estratégicos de las entidades del Estado.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca social -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="m22 21-3-3m0 0a5.5 5.5 0 1 0-7.8-7.8 5.5 5.5 0 0 0 7.8 7.8Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca social</h3>
+                    <p class="service-description">El trabajo conjunto es la base y el motor del sector solidario.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca institucional -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/>
+                            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca institucional</h3>
+                    <p class="service-description">Administra los recursos institucionales de forma eficiente.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+
+                <!-- Banca empresarial -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Banca empresarial</h3>
+                    <p class="service-description">Productos y servicios financieros diseñados para empresas.</p>
+                    <a href="#" class="service-link">Conoce más ›</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Premium Family -->
+    <section class="premium-section">
+        <div class="container">
+            <div class="premium-content">
+                <div class="premium-text">
+                    <h2 class="premium-title">Premium Family</h2>
+                    <p class="premium-description">
+                        Es el sub segmento que busca vincular a los familiares de primer grado de 
+                        consanguinidad para recibir los beneficios del segmento Premium.
+                    </p>
+                    <p class="premium-contact">
+                        Si te interesa, <a href="#" class="premium-link">contacta a tu gerente de relación</a> y recibe más información
+                    </p>
+                </div>
+                <div class="premium-image">
+                    <img src="imagenes/hombre-caminando-con-bolsas-en-el-hombro.jpg" alt="Persona con bolsas" class="premium-img">
+                    <button class="close-btn" aria-label="Cerrar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2"/>
+                            <line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="banco-footer">
+        <!-- Sección principal del app móvil -->
+        <div class="app-section">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <div class="app-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">B</span>
+                            </div>
+                        </div>
+                        <div class="app-text">
+                            <h3>App del Banco de Bogotá</h3>
+                            <p>Gestiona y consulta tus productos, envía dinero y solicita ayuda en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="app-downloads">
+                            <a href="#" class="app-btn app-store">
+                                <img src="imagenes/Descargar-AppStore.png" alt="Descargar en App Store" class="store-img">
+                            </a>
+                            <a href="#" class="app-btn google-play">
+                                <img src="imagenes/Descargar-Playstore.png" alt="Descargar en Google Play" class="store-img">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de enlaces principales -->
+        <div class="links-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Atención al cliente -->
+                    <div class="footer-column">
+                        <h4>Atención al cliente</h4>
+                        <ul>
+                            <li><a href="#">¿Necesitas ayuda?</a></li>
+                            <li><a href="#">Canales de atención</a></li>
+                            <li><a href="#">Protección al consumidor</a></li>
+                            <li><a href="#">Defensor del consumidor</a></li>
+                            <li><a href="#">Seguridad bancaria</a></li>
+                            <li><a href="#">Disponibilidad en canales</a></li>
+                            <li><a href="#">Autogestión</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="footer-column">
+                        <h4>Beneficios</h4>
+                        <ul>
+                            <li><a href="#">Alianzas Banco de Bogotá</a></li>
+                            <li><a href="#">Programa de lealtad Tuplus</a></li>
+                            <li><a href="#">Asistencias</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información -->
+                    <div class="footer-column">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Tasas y tarifas</a></li>
+                            <li><a href="#">Nuestras bancas</a></li>
+                            <li><a href="#">Sostenibilidad</a></li>
+                            <li><a href="#">Nuestra organización</a></li>
+                            <li><a href="#">Educación financiera</a></li>
+                            <li><a href="#">Pago de impuestos</a></li>
+                            <li><a href="#">Investigaciones económicas</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="#">Servílíneas</a></li>
+                            <li><a href="#">Oficinas</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                        
+                        <!-- Dropdown de Filiales y Agencias -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="filialesBtn">
+                                Filiales y Agencias
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="filialesDropdown">
+                                <a href="#">Banco de Bogotá Panamá</a>
+                                <a href="#">Banco de Bogotá Miami</a>
+                                <a href="#">Banco de Bogotá España</a>
+                                <a href="#">Fiduciaria Bogotá</a>
+                                <a href="#">Porvenir</a>
+                                <a href="#">Corficolombiana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de redes sociales y logos -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-content">
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos de entidades -->
+                    <div class="entity-logos">
+                        <div class="logo-item">
+                            <span class="logo-text">VIGILADO</span>
+                            <span class="logo-subtext">SUPERINTENDENCIA FINANCIERA DE COLOMBIA</span>
+                        </div>
+                        <div class="logo-item aval">
+                            <span class="logo-text">Grupo</span>
+                            <strong class="logo-brand">AVAL</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección final con el nombre del banco -->
+        <div class="bank-name-section">
+            <div class="container">
+                <h2 class="bank-name">Banco de Bogotá</h2>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="bancas-empresas.js"></script>
+</body>
+</html>

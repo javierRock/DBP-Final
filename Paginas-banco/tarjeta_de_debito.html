@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas Débito Empresariales</title>
+    <link rel="stylesheet" href="tarjeta_de_debito.css">
+</head>
+<body>
+    <main class="main-content">
+            <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSIjRkZENzAwIi8+Cjwvc3ZnPgo=" alt="Banco de Bogotá" class="logo">
+                <span class="brand-text">Banco de Bogotá</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="menu-item" data-menu="personas">
+                    <span>Personas</span>
+                </div>
+                <div class="menu-item active" data-menu="empresas">
+                    <span>Empresas</span>
+                </div>
+            </div>
+            
+            <div class="navbar-actions">
+                <span class="customer-service">Atención al cliente</span>
+                <button class="login-btn">
+                    <span>Ingresar</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-content">
+                <!-- Personas Content -->
+                <div class="menu-content" data-content="personas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>AHORRAR E INVERTIR</h4>
+                                <ul>
+                                    <li><a href="#">Cuentas de ahorro ›</a></li>
+                                    <li><a href="#">Cuenta corriente ›</a></li>
+                                    <li><a href="#">CDT e inversión ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>SOLUCIONES DE CRÉDITO</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                    <li><a href="#">Créditos ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>TRANSFERENCIAS INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Giros internacionales y remesas › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                                <h4>PROTÉGETE</h4>
+                                <ul>
+                                    <li><a href="#">Seguros y asistencias ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empresas Content -->
+                <div class="menu-content" data-content="empresas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>SOLUCIONES PARA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Productos de crédito ›</a></li>
+                                    <li><a href="#">Pagos y recaudos ›</a></li>
+                                    <li><a href="#">Cuentas e inversión ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                    <li><a href="#">Soluciones de logística ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>GESTIONA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                </ul>
+                                <h4>OPERACIONES INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Comercio exterior › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Divisas y derivados › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Giros internacionales › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category digital-access">
+                                <h4>Accesos digitales</h4>
+                                <ul>
+                                    <li><a href="#">Transacciones Empresas ›</a></li>
+                                    <li><a href="#">Portal de Libranzas ›</a></li>
+                                    <li><a href="#">Soluciones digitales ›</a></li>
+                                    <li><a href="#">Uso de Portal Negocios ›</a></li>
+                                    <li><a href="#">Plataforma Factoring ›</a></li>
+                                    <li><a href="#">Recaudo Verde ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atención al Cliente Content -->
+                <div class="menu-content" data-content="atencion">
+                    <div class="products-section">
+                        <h3>Atención al cliente</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>ATENCIÓN ASISTIDA</h4>
+                                <ul>
+                                    <li><a href="#">Servílínea ›</a></li>
+                                    <li><a href="#">WhatsApp › <span class="badge personal">Personal</span></a></li>
+                                    <li><a href="#">Peticiones, quejas y reclamos › <span class="badge personal">Personal</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>CANALES</h4>
+                                <ul>
+                                    <li><a href="#">Digitales ›</a></li>
+                                    <li><a href="#">Presenciales ›</a></li>
+                                    <li><a href="#">Disponibilidad de canales ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>MÁS AYUDAS</h4>
+                                <ul>
+                                    <li><a href="#">Preguntas frecuentes ›</a></li>
+                                    <li><a href="#">Protección al consumidor ›</a></li>
+                                    <li><a href="#">Defensor del consumidor ›</a></li>
+                                    <li><a href="#">Seguridad bancaria ›</a></li>
+                                    <li><a href="#">Línea ética ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- Sección Hero - Tarjetas débito empresariales -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">PRODUCTOS PARA EMPRESAS</p>
+                    <h1 class="hero-title">Tarjetas débito empresariales</h1>
+                    <p class="hero-description">
+                        Una opción para cada una de las necesidades que tiene tu compañía.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/chica-usando-ipad-navegando.jpg" alt="Mujer con tablet" class="hero-img">
+                    <div class="hero-decorations">
+                        <div class="decoration-dots dots-1"></div>
+                        <div class="decoration-dots dots-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de tarjetas disponibles -->
+        <section class="cards-section">
+            <div class="container">
+                <h2 class="section-title">¡Encuentra aquí tu tarjeta!</h2>
+                <p class="section-subtitle">
+                    Tenemos varias opciones para que escojas la tarjeta débito perfecta para ti.
+                </p>
+                
+                <div class="cards-grid">
+                    <!-- Tarjeta débito Logros -->
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="imagenes/tarjeta-de-debito-logros.png" alt="Tarjeta Logros" class="card-image">
+                        </div>
+                        <h3 class="card-title">Tarjeta débito Logros</h3>
+                        <p class="card-description">
+                            Para tener el control total del dinero en efectivo de tu empresa.
+                        </p>
+                        <a href="#" class="card-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Tarjeta débito Crecer -->
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="imagenes/tarjeta-de-debito-crecer.png" alt="Tarjeta Crecer" class="card-image">
+                        </div>
+                        <h3 class="card-title">Tarjeta débito Crecer</h3>
+                        <p class="card-description">
+                            Monitorea las transacciones y los pagos de tu negocio.
+                        </p>
+                        <a href="#" class="card-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Tarjeta Afinidad -->
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <div class="card-placeholder"></div>
+                        </div>
+                        <h3 class="card-title">Tarjeta Afinidad</h3>
+                        <p class="card-description">
+                            Un producto para los fondos y líneas de crédito de tu empresa.
+                        </p>
+                        <a href="#" class="card-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Cédula Cafetera Inteligente -->
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="imagenes/Cedula Cafetera.png" alt="Cédula Cafetera" class="card-image">
+                        </div>
+                        <h3 class="card-title">Cédula Cafetera Inteligente</h3>
+                        <p class="card-description">
+                            Una tarjeta débito para los caficultores colombianos.
+                        </p>
+                        <a href="#" class="card-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Tarjeta débito Negocios -->
+                    <div class="card-item card-item-wide">
+                        <div class="card-icon">
+                            <div class="card-placeholder"></div>
+                        </div>
+                        <h3 class="card-title">Tarjeta débito Negocios</h3>
+                        <p class="card-description">
+                            Hagamos realidad lo que tienes en mente.
+                        </p>
+                        <a href="#" class="card-link">Conoce más ›</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección CTA -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <p class="cta-subtitle">SOLICITUD DIGITAL</p>
+                    <h2 class="cta-title">¿Ya tienes la tarjeta débito perfecta para ti?</h2>
+                    <p class="cta-description">
+                        Abre tu cuenta de ahorros y solicita una de nuestras tarjetas para tener momentos únicos.
+                    </p>
+                    <button class="cta-button">Abre una cuenta ›</button>
+                </div>
+                <div class="cta-image">
+                    <img src="imagenes/hombre-joven-sentado.jpg" alt="Hombre sentado" class="cta-img">
+                    <div class="cta-decorations">
+                        <div class="decoration-lines"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Beneficios adicionales -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Beneficios adicionales</h2>
+                
+                <div class="benefits-grid">
+                    <!-- Alianzas Banco de Bogotá -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Alianzas Banco de Bogotá</h3>
+                        <p class="benefit-description">
+                            Descubre todas las ventajas por comprar con nuestras tarjetas débito y crédito.
+                        </p>
+                        <a href="#" class="benefit-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Compras por Internet -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="8" y="12" width="24" height="16" rx="2" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M16 12V8C16 6 17 5 20 5C23 5 24 6 24 8V12" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Compras por Internet</h3>
+                        <p class="benefit-description">
+                            Con el código CVV de tu tarjeta débito puedes comprar de forma segura en Colombia y en el exterior.
+                        </p>
+                        <a href="#" class="benefit-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- AvaiPay Center -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="15" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M15 20L18 23L25 16" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">AvaiPay Center</h3>
+                        <p class="benefit-description">
+                            Pagar rápido y sin preocupaciones nunca fue más fácil.
+                        </p>
+                        <a href="#" class="benefit-link">Conoce más ›</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">¿Cómo podemos ayudarte?</h2>
+                
+                <div class="faq-search">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Escribe una pregunta">
+                        <button class="search-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cómo puedo cerrar mi cuenta de ahorros?</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Comunícate con la Servilínea desde cualquier teléfono fijo, celular o en los teléfonos ubicados dentro de las oficinas del Banco de Bogotá.
+Acércate a cualquier oficina. Allí debes presentar tu documento de identidad y tarjeta débito.
+Si como titular de la cuenta autorizas a un tercero para cancelarla, esta persona debe presentar un poder amplio, suficiente y autenticado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Para apertura en oficina:
+
+Fotocopia del documento de identidad ampliado al 150 %.
+Si es una cuenta de ahorros para menores de edad, además del registro o tarjeta de identidad, se debe presentar el documento legal del tutor.
+Para apertura digital:
+
+Digitar los datos personales y financieros.</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>¡Sí! Todas nuestras cuentas de ahorros (a excepción de la cuenta de ahorro programado, AFC y ahorro programado vivienda) te dan acceso gratuito a una tarjeta débito Banco de Bogotá.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Mi cuenta de ahorros tiene asociada una tarjeta débito?</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>¡Sí! Todas nuestras cuentas de ahorros (a excepción de la cuenta de ahorro programado, AFC y ahorro programado vivienda) te dan acceso gratuito a una tarjeta débito Banco de Bogotá.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cuál es valor máximo que puedo retirar en una oficina desde mi cuenta de ahorros?</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Las transacciones efectuadas desde la oficina donde realizaste la radicación de tu cuenta de ahorros no exigen ningún valor máximo, pero si haces el retiro en una oficina diferente, el monto máximo será de 16.000.000 COP diarios.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Por qué se puede desactivar mi cuenta de ahorros?</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Si tu cuenta de ahorros no tiene movimientos en los últimos 180 días, la cuenta será desactivada. Si deseas reactivarla, dirígete a una de nuestras oficinas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué debo hacer si fui víctima de fraude?</span>
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M6 8L10 12L14 8" stroke="#666" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contacta a la Servilínea
+                                Llama a la Servilínea de tu ciudad.
+                                Identifícate con tu número de documento.
+                                Selecciona la opción de "Bloquear productos, transacciones desconocidos o alertas de fraude".
+                                Habla con un asesor de bloqueos.
+                                Reporta por canales digitales (app Banca Móvil y Banca Virtual)
+
+                                Inicia sesión en el canal.
+                                Ingresa al botón de "Ayuda" y selecciona la opción de "Solucionar mis peticiones".
+                                Selecciona el producto afectado e indica que desconoces una compra.
+                                Elige las transacciones que consideras fraudulentas (si tu tarjeta aún no está bloqueada, se procederá a bloquearla y puedes solicitar la reexpedición).
+                                Finalmente, se generará una PQRS para hacer seguimiento a tu caso y brindarte una solución.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-cta">
+                    <button class="faq-more-btn">Otras preguntas frecuentes ›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Otras soluciones -->
+        <section class="solutions-section">
+            <div class="container">
+                <h2 class="section-title">Otras soluciones para tu empresa</h2>
+                
+                <div class="solutions-grid">
+                    <!-- Tarjetas de crédito -->
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="5" y="12" width="30" height="20" rx="3" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M10 18H30" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M10 24H18" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="solution-title">Tarjetas de crédito</h3>
+                        <p class="solution-description">
+                            Impulsa tu negocio con estas opciones que hemos diseñado para ti.
+                        </p>
+                        <a href="#" class="solution-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Productos de crédito -->
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M10 30H30V12H10V30Z" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M20 18V24" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M17 21H23" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="solution-title">Productos de crédito</h3>
+                        <p class="solution-description">
+                            Encuentra la opción de crédito que realmente necesita tu empresa.
+                        </p>
+                        <a href="#" class="solution-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Recaudos y pagos -->
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="15" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M15 20L18 23L25 16" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="solution-title">Recaudos y pagos</h3>
+                        <p class="solution-description">
+                            Encuentra varias opciones para optimizar las operaciones de tu empresa.
+                        </p>
+                        <a href="#" class="solution-link">Conoce más ›</a>
+                    </div>
+
+                    <!-- Leasing para empresas -->
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M8 12H32L30 28H10L8 12Z" stroke="#0066CC" stroke-width="2"/>
+                                <path d="M8 12L6 8H4" stroke="#0066CC" stroke-width="2"/>
+                                <circle cx="14" cy="32" r="2" stroke="#0066CC" stroke-width="2"/>
+                                <circle cx="26" cy="32" r="2" stroke="#0066CC" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="solution-title">Leasing para empresas</h3>
+                        <p class="solution-description">
+                            Un arrendamiento financiero para optimizar tu operación.
+                        </p>
+                        <a href="#" class="solution-link">Conoce más ›</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="banco-footer">
+        <!-- Sección principal del app móvil -->
+        <div class="app-section">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <div class="app-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">B</span>
+                            </div>
+                        </div>
+                        <div class="app-text">
+                            <h3>App del Banco de Bogotá</h3>
+                            <p>Gestiona y consulta tus productos, envía dinero y solicita ayuda en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="app-downloads">
+                            <a href="#" class="app-btn app-store">
+                                <img src="imagenes/Descargar-AppStore.png" alt="Descargar en App Store" class="store-img">
+                            </a>
+                            <a href="#" class="app-btn google-play">
+                                <img src="imagenes/Descargar-Playstore.png" alt="Descargar en Google Play" class="store-img">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de enlaces principales -->
+        <div class="links-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Atención al cliente -->
+                    <div class="footer-column">
+                        <h4>Atención al cliente</h4>
+                        <ul>
+                            <li><a href="#">¿Necesitas ayuda?</a></li>
+                            <li><a href="#">Canales de atención</a></li>
+                            <li><a href="#">Protección al consumidor</a></li>
+                            <li><a href="#">Defensor del consumidor</a></li>
+                            <li><a href="#">Seguridad bancaria</a></li>
+                            <li><a href="#">Disponibilidad en canales</a></li>
+                            <li><a href="#">Autogestión</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="footer-column">
+                        <h4>Beneficios</h4>
+                        <ul>
+                            <li><a href="#">Alianzas Banco de Bogotá</a></li>
+                            <li><a href="#">Programa de lealtad Tuplus</a></li>
+                            <li><a href="#">Asistencias</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información -->
+                    <div class="footer-column">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Tasas y tarifas</a></li>
+                            <li><a href="#">Nuestras bancas</a></li>
+                            <li><a href="#">Sostenibilidad</a></li>
+                            <li><a href="#">Nuestra organización</a></li>
+                            <li><a href="#">Educación financiera</a></li>
+                            <li><a href="#">Pago de impuestos</a></li>
+                            <li><a href="#">Investigaciones económicas</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="#">Servílíneas</a></li>
+                            <li><a href="#">Oficinas</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                        
+                        <!-- Dropdown de Filiales y Agencias -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="filialesBtn">
+                                Filiales y Agencias
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="filialesDropdown">
+                                <a href="#">Banco de Bogotá Panamá</a>
+                                <a href="#">Banco de Bogotá Miami</a>
+                                <a href="#">Banco de Bogotá España</a>
+                                <a href="#">Fiduciaria Bogotá</a>
+                                <a href="#">Porvenir</a>
+                                <a href="#">Corficolombiana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de redes sociales y logos -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-content">
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos de entidades -->
+                    <div class="entity-logos">
+                        <div class="logo-item">
+                            <span class="logo-text">VIGILADO</span>
+                            <span class="logo-subtext">SUPERINTENDENCIA FINANCIERA DE COLOMBIA</span>
+                        </div>
+                        <div class="logo-item aval">
+                            <span class="logo-text">Grupo</span>
+                            <strong class="logo-brand">AVAL</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección final con el nombre del banco -->
+        <div class="bank-name-section">
+            <div class="container">
+                <h2 class="bank-name">Banco de Bogotá</h2>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </main>
+
+    <script src="tarjeta_de_debito.js"></script>
+</body>
+</html>

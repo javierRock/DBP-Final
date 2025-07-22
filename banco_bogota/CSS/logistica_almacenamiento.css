@@ -1,0 +1,665 @@
+:root {
+    --primary-blue: #00459C; /* Azul oscuro */
+    --secondary-blue: #0066CC; /* Azul de enlaces/botones */
+    --light-blue: #EBF2FA; /* Fondo claro de algunas secciones */
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #fff;
+    --card-bg: #fff;
+    --section-bg-light: #f8f8f8;
+    --hero-bg-orange: #FF9933; /* Naranja del hero de empresas */
+    --border-color: #ddd;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--section-bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--secondary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: '\2022'; /* Bullet point */
+    color: var(--secondary-blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 15px 0;
+}
+
+.empresas-header {
+    background-color: #000; /* Fondo negro para el header de empresas */
+}
+
+.empresas-header .main-nav a.active::after,
+.empresas-header .main-nav a:hover::after {
+    background-color: var(--hero-bg-orange); /* Naranja para la navegación activa/hover en empresas */
+}
+.empresas-header .btn-ingresar {
+    background-color: var(--hero-bg-orange);
+}
+
+.empresas-header .btn-ingresar:hover {
+    background-color: #e08a2b; /* Tono de naranja más oscuro al pasar el ratón */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Para logos blancos si el original es oscuro */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-blue);
+}
+
+.btn-ingresar {
+    background-color: var(--secondary-blue);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #005bb5;
+    text-decoration: none;
+}
+
+.btn-ingresar .material-icons {
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero-almacenamiento {
+    background-color: var(--hero-bg-orange); /* Fondo naranja para el hero */
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content .text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content .product-type {
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--text-light);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image .hero-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Información Almacenamiento */
+.informacion-almacenamiento {
+    padding: 60px 0;
+    background-color: var(--card-bg);
+}
+
+.informacion-almacenamiento .content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.informacion-almacenamiento .image-aside {
+    flex: 1;
+    text-align: center;
+}
+
+.informacion-almacenamiento .image-aside .illustration-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.informacion-almacenamiento .text-content {
+    flex: 1.5;
+}
+
+.informacion-almacenamiento .text-content h2 {
+    font-size: 2.2em;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.informacion-almacenamiento .tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.informacion-almacenamiento .tab-item {
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-medium);
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.informacion-almacenamiento .tab-item.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--secondary-blue);
+}
+
+.informacion-almacenamiento .tab-item:hover {
+    color: var(--primary-blue);
+}
+
+.informacion-almacenamiento .tab-content {
+    padding-top: 20px;
+}
+
+.informacion-almacenamiento .tab-content h3 {
+    font-size: 1.4em;
+    color: var(--primary-blue);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.informacion-almacenamiento .tab-content ul {
+    padding-left: 20px;
+}
+
+.informacion-almacenamiento .tab-content li::before {
+    color: var(--secondary-blue);
+}
+
+/* Características de almacenamiento */
+.caracteristicas-almacenamiento {
+    padding: 60px 0;
+    background-color: var(--light-blue);
+}
+
+.caracteristicas-almacenamiento h2 {
+    font-size: 2.2em;
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.caracteristicas-almacenamiento .table-container {
+    overflow-x: auto; /* Permite scroll horizontal para tablas grandes */
+}
+
+.caracteristicas-almacenamiento table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    min-width: 800px; /* Asegura que la tabla no se colapse demasiado en pantallas pequeñas */
+}
+
+.caracteristicas-almacenamiento th,
+.caracteristicas-almacenamiento td {
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    text-align: left;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.caracteristicas-almacenamiento th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+/* Otros productos de logística */
+.otros-productos-logistica {
+    padding: 60px 0;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+.otros-productos-logistica h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.otros-productos-logistica .section-description {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 40px;
+}
+
+.otros-productos-logistica .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.otros-productos-logistica .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.otros-productos-logistica .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.otros-productos-logistica .card .material-icons {
+    font-size: 48px;
+    color: var(--secondary-blue);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.otros-productos-logistica .card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.otros-productos-logistica .card p {
+    color: var(--text-medium);
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.otros-productos-logistica .card a {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-blue);
+}
+
+.otros-productos-logistica .card a .material-icons {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--secondary-blue);
+    margin-bottom: 0;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-blue); /* Default blue */
+    color: var(--text-light);
+}
+.empresas-footer {
+    background-color: #003780; /* Fondo negro para el footer de empresas */
+}
+
+.footer-bottom {
+    padding: 30px 0;
+    background-color: #003780; /* Un azul un poco más oscuro */
+}
+.empresas-footer .footer-bottom {
+    background-color: #1A1A1A; /* Un gris oscuro para el footer de empresas */
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Para que los elementos se ajusten en pantallas pequeñas */
+    gap: 20px;
+}
+
+.app-download-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-download-footer img {
+    height: 40px;
+}
+
+.app-download-footer h3 {
+    font-size: 1em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.app-download-footer p {
+    font-size: 0.8em;
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.app-buttons-small {
+    display: flex;
+    gap: 10px;
+}
+
+.app-buttons-small img {
+    height: 30px;
+    width: auto;
+}
+
+.social-media a {
+    color: var(--text-light);
+    font-size: 1.2em;
+    margin-left: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.supervision {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.supervision img {
+    height: 30px;
+}
+
+.grupo-aval img {
+    height: 30px;
+}
+
+.footer-bank-name {
+    background-color: var(--primary-blue); /* Mismo azul que el header de personas */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--light-blue);
+}
+.empresas-footer .footer-bank-name {
+    background-color: #000; /* Mismo negro que el header de empresas */
+}
+
+/* Gran Bloque Azul al final (bottom-blue-block) */
+.bottom-blue-block {
+    background-color: var(--primary-blue); /* El azul oscuro principal del banco */
+    color: var(--text-light);
+    padding: 60px 0;
+}
+
+.bottom-blue-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.bottom-blue-block h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-light); /* Texto blanco */
+}
+
+.bottom-blue-block ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.bottom-blue-block ul li::before {
+    content: '\2022'; /* Bullet point */
+    color: var(--hero-bg-orange); /* Color de bullet naranja para empresas */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.bottom-blue-block .btn-portal {
+    background-color: var(--hero-bg-orange); /* Botón naranja */
+    color: var(--text-light);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.bottom-blue-block .btn-portal:hover {
+    background-color: #e08a2b; /* Tono de naranja más oscuro al pasar el ratón */
+}
+
+.bottom-blue-block .btn-portal .material-icons {
+    margin-left: 10px;
+}
+
+.bottom-blue-block .image-column {
+    flex: 1;
+    text-align: right;
+}
+
+.bottom-blue-block .image-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bottom-blue-block .text-column {
+    flex: 1.5;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-content, .hero-content, .informacion-almacenamiento .content-wrapper,
+    .bottom-blue-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .hero-content .text-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .informacion-almacenamiento .image-aside,
+    .informacion-almacenamiento .text-content {
+        flex: none;
+        width: 100%;
+    }
+    .informacion-almacenamiento .image-aside {
+        margin-bottom: 20px;
+    }
+
+    .bottom-blue-block .image-column,
+    .bottom-blue-block .text-column {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+    .bottom-blue-block .image-column {
+        order: -1; /* Coloca la imagen encima del texto en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .caracteristicas-almacenamiento .table-container {
+        overflow-x: scroll; /* Asegura el scroll en móviles si la tabla es ancha */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .informacion-almacenamiento .tabs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .informacion-almacenamiento .tab-item {
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 0;
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: left;
+    }
+    .informacion-almacenamiento .tab-item.active {
+        border-right: 3px solid var(--secondary-blue);
+        border-bottom-color: var(--border-color); /* Restaura el color del borde inferior */
+    }
+    .caracteristicas-almacenamiento th,
+    .caracteristicas-almacenamiento td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .otros-productos-logistica .card .material-icons {
+        font-size: 36px;
+    }
+    .otros-productos-logistica .card h3 {
+        font-size: 1.2em;
+    }
+    .bottom-blue-block h3 {
+        font-size: 1.6em;
+    }
+}

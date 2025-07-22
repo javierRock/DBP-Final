@@ -1,0 +1,647 @@
+/* General Resets and Base Styles */
+:root {
+    --primary-yellow: #FFD100; /* Approximate yellow from hero */
+    --primary-blue: #004C99; /* Approximate blue from footer */
+    --dark-blue: #003366; /* Slightly darker blue for app section */
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-text: #555555;
+    --light-gray-bg: #F8F8F8;
+    --card-border: #EEEEEE;
+    --banner-blue: #002D62; /* Specific blue for the portfolio banner */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* A common sans-serif font, adjust if specific font identified */
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--light-gray-bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    color: var(--white);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li.active a {
+    color: var(--primary-yellow);
+    border-bottom: 2px solid var(--primary-yellow);
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-yellow);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.attention-link {
+    color: var(--white);
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.attention-link:hover {
+    color: var(--primary-yellow);
+}
+
+.login-button {
+    background-color: var(--primary-yellow);
+    color: var(--black);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e6b800; /* Slightly darker yellow on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-yellow);
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative; /* For the background wave effect if added later */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    padding: 50px 0; /* Vertical padding, horizontal handled by text-content/image-content padding */
+}
+
+.hero-content .text-content {
+    flex: 1;
+    padding-left: 80px;
+    padding-right: 20px;
+    z-index: 1; /* Ensure text is above potential background effects */
+}
+
+.hero-content .subtitle {
+    color: var(--white);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: var(--black);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-content .description {
+    font-size: 1.2em;
+    color: var(--black);
+    max-width: 450px;
+}
+
+.hero-content .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+    height: 100%;
+    position: relative;
+    right: -20px; /* Adjust to move image slightly outside for visual effect */
+}
+
+.hero-content .hero-image img {
+    width: 100%; /* Or specific width if image should not fill */
+    height: auto;
+    object-fit: cover;
+    mix-blend-mode: multiply; /* To blend with yellow background if desired, or remove */
+}
+
+/* Common Section Styles */
+.products-section, .other-solutions-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.products-section h2, .other-solutions-section h2 {
+    font-size: 2.5em;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.products-section > p { /* Targeting the paragraph directly under products-section */
+    color: var(--gray-text);
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/* Grid for Products and Solutions */
+.products-grid, .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.product-card, .solution-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover, .solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.product-card h3, .solution-card h3 {
+    font-size: 1.4em;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.product-card p, .solution-card p {
+    color: var(--gray-text);
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Make paragraphs take up available space */
+}
+
+.learn-more {
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* NEW SECTION: Portfolio Discount Banner */
+.portfolio-banner {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.portfolio-banner .banner-content {
+    background-color: var(--banner-blue);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+    padding: 40px; /* Initial padding */
+    position: relative; /* For the wave/graphic on top right */
+}
+
+/* Pseudo-element for the wave graphic on top right */
+.portfolio-banner .banner-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; /* Adjust size of the graphic */
+    height: 150px; /* Adjust size of the graphic */
+    background: url('banner_wave_graphic.jpg') no-repeat center center / contain; /* Placeholder for the wave graphic */
+    transform: translate(20%, -20%); /* Adjust position if needed to match image */
+    opacity: 0.8; /* Make it slightly transparent */
+    z-index: 0;
+}
+
+
+.portfolio-banner .text-area {
+    flex: 1;
+    padding-right: 30px; /* Space between text and image */
+    z-index: 1; /* Ensure text is above pseudo-element */
+}
+
+.portfolio-banner .subtitle {
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.portfolio-banner h2 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--white); /* Ensure heading is white */
+}
+
+.portfolio-banner .description {
+    font-size: 1em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.portfolio-banner .cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--primary-blue); /* Text color from original button */
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-banner .cta-button:hover {
+    background-color: var(--primary-yellow);
+    color: var(--black);
+}
+
+.portfolio-banner .cta-button i {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.portfolio-banner .image-area {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; /* Align image to bottom right */
+    position: relative;
+    right: -40px; /* Pull image slightly out */
+    bottom: -40px; /* Pull image slightly down */
+}
+
+.portfolio-banner .image-area img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 0 15px 0; /* Match rounded corners of the container if desired */
+    /* If the original image has a cut-out, adjust width/object-fit or use background-image for precision */
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding-top: 60px;
+}
+
+.app-section {
+    background-color: var(--dark-blue); /* Slightly darker blue for app section */
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.app-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.app-icon img {
+    height: 80px; /* Adjust size */
+    width: auto;
+    border-radius: 15px; /* If the app icon itself has rounded corners */
+}
+
+.app-text {
+    flex: 2; /* Allow text to take more space */
+    min-width: 300px; /* Ensure text doesn't get too narrow */
+}
+
+.app-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.app-text p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.app-badges {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow badges to wrap */
+}
+
+.app-badges img {
+    height: 45px; /* Adjust badge height */
+}
+
+.footer-links-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--white);
+}
+
+.dropdown-container {
+    margin-top: 15px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+.dropdown-toggle i {
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.social-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5em;
+}
+
+.social-icons a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-yellow);
+}
+
+.regulatory-logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.regulatory-logos img {
+    height: 40px; /* Adjust logo heights */
+    filter: brightness(0) invert(1); /* To make them white if they are black on transparent */
+}
+
+.bottom-footer-logo {
+    background-color: var(--primary-blue); /* Ensure this section maintains the blue background */
+    text-align: center;
+    padding: 40px 0;
+}
+
+.bottom-footer-logo img {
+    width: 300px; /* Adjust size of the large logo */
+    height: auto;
+    margin: 0 auto;
+    filter: brightness(0) invert(1); /* To make the text white */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content .text-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content .description {
+        font-size: 1em;
+        max-width: 100%;
+    }
+
+    .hero-content .hero-image {
+        margin-top: 30px;
+        right: 0;
+        justify-content: center;
+    }
+
+    .products-grid, .solutions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Portfolio Banner responsiveness */
+    .portfolio-banner .banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .portfolio-banner .text-area {
+        padding-right: 0;
+    }
+
+    .portfolio-banner .image-area {
+        margin-top: 30px;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-banner .banner-content::after {
+        top: 10px;
+        right: 10px;
+        transform: none;
+    }
+
+
+    .app-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-badges {
+        justify-content: center;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .social-logos {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-section h2, .other-solutions-section h2 {
+        font-size: 2em;
+    }
+
+    .products-grid, .solutions-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+
+    .product-card, .solution-card {
+        padding: 25px;
+    }
+
+    /* Portfolio Banner for small screens */
+    .portfolio-banner h2 {
+        font-size: 1.8em;
+    }
+
+    .app-text h3 {
+        font-size: 1.5em;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding-left: 0;
+    }
+
+    .regulatory-logos {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+}

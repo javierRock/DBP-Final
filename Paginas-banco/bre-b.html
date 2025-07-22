@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bre-B - Pagos Empresariales</title>
+    <link rel="stylesheet" href="bre-b.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSIjRkZENzAwIi8+Cjwvc3ZnPgo=" alt="Banco de Bogotá" class="logo">
+                <span class="brand-text">Banco de Bogotá</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="menu-item" data-menu="personas">
+                    <span>Personas</span>
+                </div>
+                <div class="menu-item active" data-menu="empresas">
+                    <span>Empresas</span>
+                </div>
+            </div>
+            
+            <div class="navbar-actions">
+                <span class="customer-service">Atención al cliente</span>
+                <button class="login-btn">
+                    <span>Ingresar</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-content">
+                <!-- Personas Content -->
+                <div class="menu-content" data-content="personas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>AHORRAR E INVERTIR</h4>
+                                <ul>
+                                    <li><a href="#">Cuentas de ahorro ›</a></li>
+                                    <li><a href="#">Cuenta corriente ›</a></li>
+                                    <li><a href="#">CDT e inversión ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>SOLUCIONES DE CRÉDITO</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                    <li><a href="#">Créditos ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>TRANSFERENCIAS INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Giros internacionales y remesas › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                                <h4>PROTÉGETE</h4>
+                                <ul>
+                                    <li><a href="#">Seguros y asistencias ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empresas Content -->
+                <div class="menu-content" data-content="empresas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>SOLUCIONES PARA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Productos de crédito ›</a></li>
+                                    <li><a href="#">Pagos y recaudos ›</a></li>
+                                    <li><a href="#">Cuentas e inversión ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                    <li><a href="#">Soluciones de logística ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>GESTIONA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                </ul>
+                                <h4>OPERACIONES INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Comercio exterior › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Divisas y derivados › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Giros internacionales › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category digital-access">
+                                <h4>Accesos digitales</h4>
+                                <ul>
+                                    <li><a href="#">Transacciones Empresas ›</a></li>
+                                    <li><a href="#">Portal de Libranzas ›</a></li>
+                                    <li><a href="#">Soluciones digitales ›</a></li>
+                                    <li><a href="#">Uso de Portal Negocios ›</a></li>
+                                    <li><a href="#">Plataforma Factoring ›</a></li>
+                                    <li><a href="#">Recaudo Verde ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atención al Cliente Content -->
+                <div class="menu-content" data-content="atencion">
+                    <div class="products-section">
+                        <h3>Atención al cliente</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>ATENCIÓN ASISTIDA</h4>
+                                <ul>
+                                    <li><a href="#">Servílínea ›</a></li>
+                                    <li><a href="#">WhatsApp › <span class="badge personal">Personal</span></a></li>
+                                    <li><a href="#">Peticiones, quejas y reclamos › <span class="badge personal">Personal</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>CANALES</h4>
+                                <ul>
+                                    <li><a href="#">Digitales ›</a></li>
+                                    <li><a href="#">Presenciales ›</a></li>
+                                    <li><a href="#">Disponibilidad de canales ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>MÁS AYUDAS</h4>
+                                <ul>
+                                    <li><a href="#">Preguntas frecuentes ›</a></li>
+                                    <li><a href="#">Protección al consumidor ›</a></li>
+                                    <li><a href="#">Defensor del consumidor ›</a></li>
+                                    <li><a href="#">Seguridad bancaria ›</a></li>
+                                    <li><a href="#">Línea ética ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Sección Hero Principal -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">BRE-B PARA EMPRESAS</p>
+                <h1 class="hero-title">Bre-B es recibir pagos desde cualquier banco</h1>
+                <p class="hero-description">Las transferencias llegan a tu cuenta al instante, sin importar el banco o la billetera digital.</p>
+            </div>
+            <div class="hero-image">
+                <img src="imagenes/hombre-sonriendo-desk.png" alt="Empresario con teléfono" class="businessman-img">
+                <div class="floating-icons">
+                    <div class="icon dollar-icon">$</div>
+                    <div class="icon phone-icon">📱</div>
+                    <div class="icon check-icon">✓</div>
+                    <div class="icon money-icon">💰</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Información de Bre-B -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-image">
+                <div class="info-image">
+                    <img src="imagenes/hombre-sonriendo-bre-b.webp" alt="Tarjeta Bre-B" class="bre-b-image">
+                </div>
+            </div>
+            <div class="info-content">
+                <h2>Bre-B es para pequeños comercios y grandes empresas</h2>
+                <p>Si cuentas con el <strong>Código QR Entre Cuentas</strong>, tu empresa ya tiene una de las llaves habilitadas para recibir pagos a través de <strong>Bre-B</strong>, el nuevo sistema de pagos inmediatos del Banco de la República.</p>
+                <p>Esto es posible gracias al <strong>código del comercio</strong> (o Merchant ID), la llave detrás del <strong>código QR</strong> que ya te permite a tu empresa recibir <strong>transferencias inmediatas</strong> desde cualquier banco.</p>
+                <p>Próximamente, las empresas también podrán recibir dinero usando otros tipos de llaves disponibles en Bre-B.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Llaves de Bre-B -->
+    <section class="keys-section">
+        <div class="keys-container">
+            <h2 class="keys-title">Los llaves de Bre-B para tu empresa</h2>
+            <p class="keys-subtitle">Estos son los tipos de llaves que estarán disponibles muy pronto para grandes empresas y pequeños comercios:</p>
+            
+            <div class="keys-grid">
+                <div class="key-card">
+                    <div class="key-icon">🏪</div>
+                    <h3>Código de comercio (Merchant ID)</h3>
+                    <p>Número único que identifica a tu empresa como comercio en el sistema.</p>
+                </div>
+                <div class="key-card">
+                    <div class="key-icon">📄</div>
+                    <h3>NIT</h3>
+                    <p>Tu Número de Identificación Tributaria (NIT) servirá como una llave para recibir...</p>
+                </div>
+                <div class="key-card">
+                    <div class="key-icon">📱</div>
+                    <h3>Número de celular</h3>
+                    <p>El celular de tu empresa también será una llave para recibir pagos inmediatos.</p>
+                </div>
+                <div class="key-card">
+                    <div class="key-icon">✉️</div>
+                    <h3>Correo electrónico</h3>
+                    <p>Tu correo corporativo podrá usarse como llave para recibir pagos inmediatos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Merchant ID con Pestañas -->
+    <section class="merchant-section">
+        <div class="merchant-container">
+            <div class="merchant-image">
+                <div class="merchant-image">
+                    <img src="imagenes/bre-b-texto.webp" alt="Tarjeta Merchant ID" class="merchant-image-full">
+                </div>
+            </div>
+            <div class="merchant-content">
+                <h2>¿Qué es el código o merchant ID?</h2>
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <button class="tab-button active" data-tab="generalidades">Generalidades</button>
+                        <button class="tab-button" data-tab="caracteristicas">Características</button>
+                        <button class="tab-button" data-tab="funcionamiento">Funcionamiento</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-pane active" id="generalidades">
+                            <p><strong>¿Qué es?</strong> Es una de las llaves reguladas por el Banco de la República. Se trata de un código único de aproximadamente 10 caracteres, asignado a tu empresa o negocio.</p>
+                            <p><strong>¿Para qué sirve?</strong> Permite recibir pagos inmediatos desde diferentes entidades financieras a través de transferencias.</p>
+                            <p><strong>¿Cómo se usa?</strong> Esta llave se representa con un código QR, que puede ser:</p>
+                            <ul>
+                                <li>Estático: siempre muestra los mismos datos.</li>
+                                <li>Dinámico: cambia según el valor o el método de acceso.</li>
+                            </ul>
+                            <p><strong>¿Para quién es ideal?</strong> Perfecta para comercios que:</p>
+                        </div>
+                        <div class="tab-pane" id="caracteristicas">
+                            <p><strong>Sin límites ni enredos:</strong></p>
+                            <ul>
+                                <li>Con tu llave recibes transferencias instantáneas, sin límites y desde cualquier banco.</li>
+                                <li>No hay retenciones de ley: lo que te transfieren es lo que recibes. <strong>Importante:</strong> Se aplica una comisión negociada sobre el valor de la venta.</li>
+                            </ul>
+                            <p><strong>Cada punto de venta con su propia llave:</strong></p>
+                            <ul>
+                                <li>Cada local o sucursal puede tener su llave ID y código QR respectivo.</li>
+                                <li>Gestiona las ventas recibidas con la llave de tu comercio desde un único portal fácil de usar.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="funcionamiento">
+                            <p><strong>¿Cómo recibo dinero con mi llave?</strong></p>
+                            <ul>
+                                <li><strong>Con tu QR:</strong> Recibirás un código QR asociado a tu Merchant ID para que tu cliente lo escanee desde su app bancaria y pague al instante.</li>
+                                <li><strong>Con el número de la llave:</strong> Si lo prefieres, también puedes compartir el número de tu Merchant ID, para que el cliente lo ingrese manualmente como llave y haga la transferencia.</li>
+                            </ul>
+                            <p><strong>¿En qué formatos puedes recibir tu código QR?</strong></p>
+                            <ul>
+                                <li><strong>Formato digital (siempre disponible):</strong> Puedes descargarlo, compartirlo o imprimirlo. Ideal para canales digitales como páginas web, redes sociales, apps o plataformas de venta en línea.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo solicitar Merchant ID -->
+<section class="request-section">
+    <div class="request-container">
+        <div class="request-content">
+            <h2>¿Cómo puedes solicitar tu Merchant ID?</h2>
+            <p>
+                Solicita el registro de esta llave con ayuda de tu Gerente de Relación.
+                Muy pronto también podrás hacer el registro de esta y demás llaves directamente desde nuestros canales digitales.
+            </p>
+        </div>
+        <div class="request-image">
+            <img src="imagenes/hombre-viendo-celular-breb.png" alt="Tarjeta pequeña Bre-B" class="bre-b-small-image">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sección Beneficios -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <h2 class="benefits-title">Beneficios de Bre-B para empresas</h2>
+            <p class="benefits-subtitle">Puedes asociar una o varias llaves a tus cuentas, siempre y cuando no se repitan entre sí ni estén asociadas a otras cuentas o depósitos electrónicos.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏛️</div>
+                    <h3>Recibir pagos desde cualquier banco</h3>
+                    <p>Tu cliente puede pagarte desde cualquier banco, fácil y rápido.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Dinero disponible al instante</h3>
+                    <p>Los pagos llegan a tu cuenta de inmediato, las 24 horas y los 365 días del año.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💳</div>
+                    <h3>Bajos costos por transacción</h3>
+                    <p>Las tarifas de comisión se negocian directamente con tu empresa.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Pagos seguros y respaldados</h3>
+                    <p>Bre-B es operado por el Banco de la República, lo que garantiza seguridad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ayuda con Pestañas -->
+    <section class="help-section">
+        <div class="help-container">
+            <h2 class="help-title">¿Necesitas ayuda?</h2>
+            <p class="help-subtitle">Para que resuelvas todas tus dudas con tranquilidad, consulta directamente los canales oficiales del Banco de Bogotá.</p>
+            
+            <div class="help-tabs-container">
+                <div class="help-tabs-header">
+                    <button class="help-tab-button active" data-help-tab="canales">Canales de atención</button>
+                    <button class="help-tab-button" data-help-tab="puntos">Puntos de atención</button>
+                </div>
+                <div class="help-tabs-content">
+                    <div class="help-tab-pane active" id="canales">
+                        <div class="help-channels-grid">
+                            <div class="help-channel-card">
+                                <div class="help-channel-icon">📱</div>
+                                <h3>Descarga la App Banca Móvil</h3>
+                                <p>Diseñamos una aplicación para que hagas transacciones y consultas.</p>
+                                <a href="#" class="help-link">Usar la app ›</a>
+                            </div>
+                            <div class="help-channel-card">
+                                <div class="help-channel-icon">📞</div>
+                                <h3>Llámanos a la Servilínea</h3>
+                                <p>Desde cualquier parte del país puedes llamarnos y tendrás atención preferencial.</p>
+                                <a href="#" class="help-link">Ver líneas ›</a>
+                            </div>
+                            <div class="help-channel-card">
+                                <div class="help-channel-icon">💬</div>
+                                <h3>Comunícate 24/7vía WhatsApp</h3>
+                                <p>Infórmate sobre tus productos y resuelve dudas en cualquier momento.</p>
+                                <a href="#" class="help-link">Iniciar conversación ›</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help-tab-pane" id="puntos">
+                        <div class="office-finder">
+                            <div class="office-finder-content">
+                                <h3>Nuestras oficinas cerca de ti</h3>
+                                <p>Encuentra un punto de atención presencial con tu ubicación.</p>
+                                <button class="search-button">Buscar</button>
+                            </div>
+                            <div class="office-finder-image">
+                                <img src="imagenes/mujer-sonriendo-viendo-tablet-2.jpg" alt="Atención al cliente" class="service-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <footer class="banco-footer">
+        <!-- Sección principal del app móvil -->
+        <div class="app-section">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <div class="app-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">B</span>
+                            </div>
+                        </div>
+                        <div class="app-text">
+                            <h3>App del Banco de Bogotá</h3>
+                            <p>Gestiona y consulta tus productos, envía dinero y solicita ayuda en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="app-downloads">
+                        <a href="#" class="download-btn google-play">
+                            <span>DISPONIBLE EN</span>
+                            <strong>Google Play</strong>
+                        </a>
+                        <a href="#" class="download-btn app-store">
+                            <span>CONSÍGUELO EN EL</span>
+                            <strong>App Store</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de enlaces principales -->
+        <div class="links-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Atención al cliente -->
+                    <div class="footer-column">
+                        <h4>Atención al cliente</h4>
+                        <ul>
+                            <li><a href="#">¿Necesitas ayuda?</a></li>
+                            <li><a href="#">Canales de atención</a></li>
+                            <li><a href="#">Protección al consumidor</a></li>
+                            <li><a href="#">Defensor del consumidor</a></li>
+                            <li><a href="#">Seguridad bancaria</a></li>
+                            <li><a href="#">Disponibilidad en canales</a></li>
+                            <li><a href="#">Autogestión</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="footer-column">
+                        <h4>Beneficios</h4>
+                        <ul>
+                            <li><a href="#">Alianzas Banco de Bogotá</a></li>
+                            <li><a href="#">Programa de lealtad Tuplus</a></li>
+                            <li><a href="#">Asistencias</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información -->
+                    <div class="footer-column">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Tasas y tarifas</a></li>
+                            <li><a href="#">Nuestras bancas</a></li>
+                            <li><a href="#">Sostenibilidad</a></li>
+                            <li><a href="#">Nuestra organización</a></li>
+                            <li><a href="#">Educación financiera</a></li>
+                            <li><a href="#">Pago de impuestos</a></li>
+                            <li><a href="#">Investigaciones económicas</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="#">Servílíneas</a></li>
+                            <li><a href="#">Oficinas</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                        
+                        <!-- Dropdown de Filiales y Agencias -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="filialesBtn">
+                                Filiales y Agencias
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="filialesDropdown">
+                                <a href="#">Banco de Bogotá Panamá</a>
+                                <a href="#">Banco de Bogotá Miami</a>
+                                <a href="#">Banco de Bogotá España</a>
+                                <a href="#">Fiduciaria Bogotá</a>
+                                <a href="#">Porvenir</a>
+                                <a href="#">Corficolombiana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de redes sociales y logos -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-content">
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos de entidades -->
+                    <div class="entity-logos">
+                        <div class="logo-item">
+                            <span class="logo-text">VIGILADO</span>
+                            <span class="logo-subtext">SUPERINTENDENCIA FINANCIERA DE COLOMBIA</span>
+                        </div>
+                        <div class="logo-item aval">
+                            <span class="logo-text">Grupo</span>
+                            <strong class="logo-brand">AVAL</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección final con el nombre del banco -->
+        <div class="bank-name-section">
+            <div class="container">
+                <h2 class="bank-name">Banco de Bogotá</h2>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="bre-b.js"></script>
+</body>
+</html>

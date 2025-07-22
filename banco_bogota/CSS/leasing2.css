@@ -1,0 +1,898 @@
+:root {
+    --primary-blue: #00459C; /* Azul oscuro del header/footer */
+    --secondary-blue: #0066CC; /* Azul de enlaces/botones */
+    --light-blue: #EBF2FA; /* Fondo claro de algunas secciones */
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #fff;
+    --card-bg: #fff;
+    --section-bg-light: #f8f8f8;
+    --hero-bg-purple: #f5e4ed; /* Color de fondo del hero */
+    --hero-bg-orange: #ff9900; /* Color de la forma de onda en el hero */
+    --border-color: #ddd;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--section-bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--secondary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 30px; /* Ajusta según el tamaño de tu logo */
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Para logos blancos si el original es oscuro */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-blue);
+}
+
+.btn-ingresar {
+    background-color: var(--secondary-blue);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #005bb5;
+    text-decoration: none;
+}
+
+.btn-ingresar .material-icons {
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero-leasing {
+    background-color: var(--hero-bg-purple); /* Base color */
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden; /* Para ocultar partes de la imagen que sobresalgan */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre la imagen */
+}
+
+.hero-leasing::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%; /* Ajusta el ancho de la forma de onda */
+    height: 100%;
+    background-color: var(--hero-bg-orange); /* Color de la forma de onda */
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); /* Forma de onda */
+    z-index: 0;
+}
+
+.hero-content .text-content {
+    flex: 1;
+    max-width: 50%;
+    z-index: 2;
+}
+
+.hero-content .product-type {
+    color: var(--secondary-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--text-medium);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    height: 450px; /* Define una altura para el contenedor de la imagen */
+    display: flex;
+    align-items: flex-end; /* Alinea la imagen a la parte inferior del contenedor */
+    justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
+}
+
+.hero-image .hero-img {
+    max-width: 100%;
+    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Leasing Options */
+.leasing-options {
+    padding: 60px 0;
+    background-color: var(--card-bg); /* Fondo blanco */
+    text-align: center;
+}
+
+.leasing-options h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.leasing-options .section-description {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card .material-icons {
+    font-size: 48px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    display: block; /* Para centrar el icono si el texto es centrado */
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.card p {
+    color: var(--text-medium);
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.card a {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-blue);
+}
+
+.card a .material-icons {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--secondary-blue);
+    margin-bottom: 0;
+}
+
+/* Double Payment Avoidance Section */
+/* ... (código anterior) ... */
+
+/* Double Payment Avoidance Section */
+.double-payment-avoidance {
+    padding: 80px 0;
+    background-color: var(--light-blue);
+}
+
+.double-payment-avoidance .content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.double-payment-avoidance .text-content {
+    flex: 2;
+    /* Añade un background y padding para que parezca un "cuadro" externo si lo deseas,
+       o déjalo sin esto si el cuadro ya lo define el diseño global de la sección.
+       Basado en la imagen, el cuadro parece ser el fondo del text-content. */
+    background-color: var(--card-bg); /* Fondo blanco para el cuadro principal */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Sombra ligera */
+}
+
+/* Estilos para el contenedor con scroll */
+.scrollable-content {
+    max-height: 400px; /* Altura máxima del cuadro antes de que aparezca la barra de desplazamiento */
+    overflow-y: auto; /* Habilita la barra de desplazamiento vertical cuando el contenido exceda max-height */
+    padding-right: 15px; /* Espacio para la barra de desplazamiento y padding interno */
+    margin-bottom: 20px; /* Margen debajo del cuadro desplazable */
+}
+
+/* Estilos opcionales para la barra de desplazamiento (personalización) */
+.scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: var(--secondary-blue);
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue);
+}
+
+
+/* Resto de estilos para info-block y otros elementos... */
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-bg); /* Opcional: si quieres un fondo blanco dentro del cuadro desplazable */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px; /* Ajusta el margen inferior entre los bloques */
+    gap: 20px;
+}
+/* Asegúrate que el último info-block dentro de scrollable-content no tenga margin-bottom excesivo */
+.scrollable-content .info-block:last-child {
+    margin-bottom: 0;
+}
+
+/* ... (resto del código) ... */
+.info-block .icon-container {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-block .material-icons, .info-block .fab {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+.info-block .block-details h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: var(--primary-blue);
+}
+
+.info-block .block-details p {
+    font-size: 0.95em;
+    color: var(--text-medium);
+}
+
+.info-block .block-details .highlight {
+    font-weight: 500;
+    color: var(--primary-blue);
+}
+
+.double-payment-avoidance .important-note {
+    font-weight: 500;
+    color: var(--primary-blue);
+    margin-top: 30px;
+}
+
+.double-payment-avoidance .small-text {
+    font-size: 0.85em;
+    color: var(--text-medium);
+    margin-bottom: 5px;
+}
+
+.image-aside {
+    flex: 1;
+    text-align: center;
+}
+
+.image-aside .illustration-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Si la imagen tiene esquinas redondeadas */
+}
+
+/* Solution Lines Section */
+.solution-lines {
+    padding: 80px 0;
+    background-color: var(--card-bg);
+}
+
+.solution-lines .solution-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.solution-lines h2 {
+    flex: 1;
+    font-size: 2.2em;
+    line-height: 1.2;
+    color: var(--primary-blue);
+}
+
+.solution-lines .financing-details {
+    flex: 2;
+}
+
+.solution-lines .financing-details h3 {
+    font-size: 1.5em;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.solution-lines .financing-details p {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+.solution-lines .financing-details ul {
+    list-style: none; /* Elimina los puntos por defecto */
+    padding: 0;
+}
+
+.solution-lines .financing-details ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--text-medium);
+    font-size: 1em;
+}
+
+.solution-lines .financing-details ul li::before {
+    content: '\2022'; /* Código Unicode para un punto */
+    color: var(--secondary-blue); /* Color del punto */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Help Section */
+.help-section {
+    padding: 80px 0;
+    background-color: var(--light-blue);
+    text-align: center;
+}
+
+.help-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.help-section p {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 40px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.tab-item {
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-medium);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.tab-item.active {
+    color: var(--primary-blue);
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-blue);
+}
+
+.tab-item:hover {
+    color: var(--primary-blue);
+}
+
+.help-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.help-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.help-card .material-icons, .help-card .fab {
+    font-size: 48px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.help-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.help-card p {
+    color: var(--text-medium);
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.help-card a {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-blue);
+}
+
+.help-card a .material-icons {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--secondary-blue);
+    margin-bottom: 0;
+}
+
+/* Mobile App Promo */
+.mobile-app-promo {
+    padding: 60px 0;
+    background-color: var(--card-bg); /* Fondo blanco */
+}
+
+.app-promo-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-phone-image {
+    flex: 1;
+    text-align: center;
+}
+
+.app-phone-image .app-display-img {
+    max-width: 80%; /* Ajusta el tamaño del teléfono */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.app-text-download {
+    flex: 1;
+}
+
+.app-text-download .app-label {
+    color: var(--secondary-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.app-text-download h2 {
+    font-size: 2.5em;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.app-text-download p {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 30px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.app-buttons img {
+    height: 50px; /* Ajusta el tamaño de los botones de descarga */
+    width: auto;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.footer-top-links {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top-links .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--text-light);
+    font-size: 0.9em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    padding: 30px 0;
+    background-color: #003780; /* Un azul un poco más oscuro para esta sección */
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que los elementos se ajusten en pantallas pequeñas */
+    gap: 20px;
+}
+
+.app-download-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-download-footer img {
+    height: 40px;
+}
+
+.app-download-footer h3 {
+    font-size: 1em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.app-download-footer p {
+    font-size: 0.8em;
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.app-buttons-small {
+    display: flex;
+    gap: 10px;
+}
+
+.app-buttons-small img {
+    height: 30px; /* Tamaño más pequeño para los botones de la app en el footer */
+    width: auto;
+}
+
+.social-media a {
+    color: var(--text-light);
+    font-size: 1.2em;
+    margin-left: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.supervision {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.supervision img {
+    height: 30px;
+}
+
+.grupo-aval img {
+    height: 30px;
+}
+
+.footer-bank-name {
+    background-color: var(--primary-blue); /* Mismo azul que el header */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--light-blue); /* Un azul más claro para el texto grande */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-content, .hero-content, .double-payment-avoidance .content-wrapper,
+    .solution-lines .solution-content, .app-promo-content, .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .hero-content .text-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-leasing::before {
+        clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); /* Ajusta la forma para tablet/móvil */
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .hero-image {
+        height: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-image .hero-img {
+        position: relative;
+        height: auto;
+        max-width: 80%;
+    }
+
+    .double-payment-avoidance .text-content, .image-aside {
+        flex: none;
+        width: 100%;
+    }
+
+    .solution-lines h2, .solution-lines .financing-details {
+        flex: none;
+        width: 100%;
+    }
+
+    .app-phone-image, .app-text-download {
+        flex: none;
+        width: 100%;
+    }
+    .app-phone-image .app-display-img {
+        max-width: 60%;
+    }
+
+    .footer-bottom-content {
+        align-items: center;
+    }
+
+    .app-download-footer, .social-media, .supervision, .grupo-aval {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+    .footer-col ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    .main-nav {
+        margin-top: 20px;
+    }
+
+    .card-grid, .help-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .double-payment-avoidance .content-wrapper {
+        gap: 30px;
+    }
+
+    .solution-lines .solution-content {
+        gap: 30px;
+    }
+
+    .app-promo-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 20px;
+    }
+    .main-nav li {
+        margin-left: 0;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .help-section p {
+        font-size: 1em;
+    }
+    .app-text-download h2 {
+        font-size: 2em;
+    }
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-buttons img {
+        width: 180px; /* Ajusta el ancho de los botones para móviles */
+        height: auto;
+    }
+
+    .footer-bank-name span {
+        font-size: 1.8em;
+    }
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PQRS - Banco de Bogotá</title>
+    <link rel="stylesheet" href="PQRS.css">
+</head>
+<body>
+    <main class="main-content">
+            <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSIjRkZENzAwIi8+Cjwvc3ZnPgo=" alt="Banco de Bogotá" class="logo">
+                <span class="brand-text">Banco de Bogotá</span>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="menu-item" data-menu="personas">
+                    <span>Personas</span>
+                </div>
+                <div class="menu-item active" data-menu="empresas">
+                    <span>Empresas</span>
+                </div>
+            </div>
+            
+            <div class="navbar-actions">
+                <span class="customer-service">Atención al cliente</span>
+                <button class="login-btn">
+                    <span>Ingresar</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-content">
+                <!-- Personas Content -->
+                <div class="menu-content" data-content="personas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>AHORRAR E INVERTIR</h4>
+                                <ul>
+                                    <li><a href="#">Cuentas de ahorro ›</a></li>
+                                    <li><a href="#">Cuenta corriente ›</a></li>
+                                    <li><a href="#">CDT e inversión ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>SOLUCIONES DE CRÉDITO</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                    <li><a href="#">Créditos ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>TRANSFERENCIAS INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Giros internacionales y remesas › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                                <h4>PROTÉGETE</h4>
+                                <ul>
+                                    <li><a href="#">Seguros y asistencias ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empresas Content -->
+                <div class="menu-content" data-content="empresas">
+                    <div class="products-section">
+                        <h3>Productos</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>SOLUCIONES PARA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Productos de crédito ›</a></li>
+                                    <li><a href="#">Pagos y recaudos ›</a></li>
+                                    <li><a href="#">Cuentas e inversión ›</a></li>
+                                    <li><a href="#">Leasing ›</a></li>
+                                    <li><a href="#">Soluciones de logística ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>GESTIONA TU EMPRESA</h4>
+                                <ul>
+                                    <li><a href="#">Tarjetas de crédito ›</a></li>
+                                </ul>
+                                <h4>OPERACIONES INTERNACIONALES</h4>
+                                <ul>
+                                    <li><a href="#">Comercio exterior › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Divisas y derivados › <span class="badge">Nuevo</span></a></li>
+                                    <li><a href="#">Giros internacionales › <span class="badge">Nuevo</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category digital-access">
+                                <h4>Accesos digitales</h4>
+                                <ul>
+                                    <li><a href="#">Transacciones Empresas ›</a></li>
+                                    <li><a href="#">Portal de Libranzas ›</a></li>
+                                    <li><a href="#">Soluciones digitales ›</a></li>
+                                    <li><a href="#">Uso de Portal Negocios ›</a></li>
+                                    <li><a href="#">Plataforma Factoring ›</a></li>
+                                    <li><a href="#">Recaudo Verde ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atención al Cliente Content -->
+                <div class="menu-content" data-content="atencion">
+                    <div class="products-section">
+                        <h3>Atención al cliente</h3>
+                        <div class="products-grid">
+                            <div class="product-category">
+                                <h4>ATENCIÓN ASISTIDA</h4>
+                                <ul>
+                                    <li><a href="#">Servílínea ›</a></li>
+                                    <li><a href="#">WhatsApp › <span class="badge personal">Personal</span></a></li>
+                                    <li><a href="#">Peticiones, quejas y reclamos › <span class="badge personal">Personal</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>CANALES</h4>
+                                <ul>
+                                    <li><a href="#">Digitales ›</a></li>
+                                    <li><a href="#">Presenciales ›</a></li>
+                                    <li><a href="#">Disponibilidad de canales ›</a></li>
+                                </ul>
+                            </div>
+                            <div class="product-category">
+                                <h4>MÁS AYUDAS</h4>
+                                <ul>
+                                    <li><a href="#">Preguntas frecuentes ›</a></li>
+                                    <li><a href="#">Protección al consumidor ›</a></li>
+                                    <li><a href="#">Defensor del consumidor ›</a></li>
+                                    <li><a href="#">Seguridad bancaria ›</a></li>
+                                    <li><a href="#">Línea ética ›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">ATENCIÓN AL CLIENTE</span>
+                    <h1 class="hero-title">Peticiones, quejas y reclamos (PQRS)</h1>
+                    <p class="hero-description">
+                        Autogestiona tus solicitudes de forma rápida y fácil desde la 
+                        app Banca Móvil o a través de Banca Virtual.
+                    </p>
+                    <button class="hero-button">Crear petición</button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-decoration"></div>
+                    <div class="hero-person">
+                        <img src="imagenes/hombre-joven-usando-tablet.jpg" alt="Persona sonriente">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="video-container">
+                <div class="video-content">
+                    <h2 class="video-title">¿Qué puedes hacer?</h2>
+                    <ol class="video-list">
+                        <li>Radicar solicitudes de tus productos en 3 minutos.</li>
+                        <li>Consultar el estado de tus solicitudes radicadas.</li>
+                        <li>Conocer la respuesta dada por el banco.</li>
+                    </ol>
+                    <button class="video-replay-btn">Reproducir video ›</button>
+                </div>
+                <div class="video-player">
+                    <div class="video-thumbnail">
+                        <img src="imagenes/video_explicativo.png" alt="Video explicativo">
+                        <button class="play-button">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="steps-section">
+            <div class="steps-container">
+                <h2 class="steps-title">Paso a paso para hacer una PQRS</h2>
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-01.jpg" alt="App móvil">
+                        </div>
+                        <h3 class="step-title">Inicia sesión en tu App banca móvil o banca virtual</h3>
+                        <p class="step-description">
+                            Ingresa a virtual.bancodebogota.o desde la App en tu celular y digita tu número de 
+                            identificación y clave segura.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-02.jpg" alt="Botón ayuda">
+                        </div>
+                        <h3 class="step-title">Haz clic en el botón: Ayuda</h3>
+                        <p class="step-description">
+                            En la parte superior a la derecha encontrarás el botón: Ayuda.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-03.jpg" alt="Gestionar peticiones">
+                        </div>
+                        <h3 class="step-title">Elige la opción: Gestionar mis peticiones</h3>
+                        <p class="step-description">
+                            Ingresa a: Gestionar mis peticiones para radicar y/o consultar el detalle de tus 
+                            solicitudes.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-04.jpg" alt="Nueva PQRS">
+                        </div>
+                        <h3 class="step-title">Crea una nueva PQRS</h3>
+                        <p class="step-description">
+                            Desde aquí empieza a crear tu solicitud dándole clic en el botón: Crear una PQRS.
+                        </p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-05.jpg" alt="Seleccionar categoría">
+                        </div>
+                        <h3 class="step-title">Selecciona la categoría y el motivo</h3>
+                        <p class="step-description">
+                            Elige el producto sobre el cual deseas hacer tu petición, seguido de la categoría y 
+                            el motivo.
+                        </p>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <div class="step-phone">
+                            <img src="imagenes/celular-06.jpg" alt="Seguimiento">
+                        </div>
+                        <h3 class="step-title">Haz seguimiento y consulta tu respuesta</h3>
+                        <p class="step-description">
+                            Desde aquí puedes darle seguimiento a tu solicitud. Una vez esté resuelta tu petición, 
+                            podrás descargar la respuesta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services Section -->
+        <section class="additional-services">
+            <div class="services-container">
+                <h2 class="services-title">También puedes hacer otras consultas</h2>
+                <p class="services-description">
+                    A través de nuestra sección digital de PQRS podrás gestionar tus productos financieros.
+                </p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="imagenes/aclaracion.jpg" alt="Aclaración de pagos">
+                        </div>
+                        <h3 class="service-title">Aclaración de pagos</h3>
+                        <p class="service-description">
+                            Conoce cómo queda aplicado el pago en tus créditos o tarjeta de crédito.
+                        </p>
+                        <button class="service-button">Reproducir video ›</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="imagenes/pareja con laptop.jpg" alt="Aclaración de extracto">
+                        </div>
+                        <h3 class="service-title">Aclaración de tu extracto</h3>
+                        <p class="service-description">
+                            Consulta los valores por cada movimiento como: cuotas de manejo y/o pagos 
+                            automáticos.
+                        </p>
+                        <button class="service-button">Reproducir video ›</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="imagenes/mujer con celular.jpg" alt="Aclaración del 4 x 1.000">
+                        </div>
+                        <h3 class="service-title">Aclaración del 4 x 1.000</h3>
+                        <p class="service-description">
+                            Infórmate sobre el cobro de este impuesto y/o embargo a tu cuenta.
+                        </p>
+                        <button class="service-button">Reproducir video ›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section class="help-section">
+            <div class="help-container">
+                <h2 class="help-title">¿Necesitas ayuda?</h2>
+                <p class="help-description">
+                    Para que resuelvas todas tus dudas con tranquilidad, consulta directamente los canales oficiales del Banco de Bogotá.
+                </p>
+
+                <div class="help-tabs">
+                    <button class="help-tab active" data-tab="canales">Canales de atención</button>
+                    <button class="help-tab" data-tab="puntos">Puntos de atención</button>
+                </div>
+
+                <div class="help-content">
+                    <div class="help-channels" id="canales-content">
+                        <div class="channel-grid">
+                            <div class="channel-card">
+                                <div class="channel-icon">📱</div>
+                                <h3 class="channel-title">Banca Móvil</h3>
+                                <p class="channel-description">
+                                    Diseñamos una app para que hagas transacciones y consultas.
+                                </p>
+                                <button class="channel-button">Tener más información ›</button>
+                            </div>
+
+                            <div class="channel-card">
+                                <div class="channel-icon">📞</div>
+                                <h3 class="channel-title">Servilínea</h3>
+                                <p class="channel-description">
+                                    Llámanos a nuestras líneas de atención telefónica para hacer tus consultas.
+                                </p>
+                                <button class="channel-button">Conocer las líneas ›</button>
+                            </div>
+
+                            <div class="channel-card">
+                                <div class="channel-icon">💬</div>
+                                <h3 class="channel-title">WhatsApp</h3>
+                                <p class="channel-description">
+                                    Haz consultas de tus productos y resuelve dudas en cualquier momento.
+                                </p>
+                                <button class="channel-button">Iniciar conversación ›</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-points" id="puntos-content" style="display: none;">
+                        <p>Contenido de puntos de atención...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="banco-footer">
+        <!-- Sección principal del app móvil -->
+        <div class="app-section">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <div class="app-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">B</span>
+                            </div>
+                        </div>
+                        <div class="app-text">
+                            <h3>App del Banco de Bogotá</h3>
+                            <p>Gestiona y consulta tus productos, envía dinero y solicita ayuda en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="app-downloads">
+                            <a href="#" class="app-btn app-store">
+                                <img src="imagenes/Descargar-AppStore.png" alt="Descargar en App Store" class="store-img">
+                            </a>
+                            <a href="#" class="app-btn google-play">
+                                <img src="imagenes/Descargar-Playstore.png" alt="Descargar en Google Play" class="store-img">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de enlaces principales -->
+        <div class="links-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Atención al cliente -->
+                    <div class="footer-column">
+                        <h4>Atención al cliente</h4>
+                        <ul>
+                            <li><a href="#">¿Necesitas ayuda?</a></li>
+                            <li><a href="#">Canales de atención</a></li>
+                            <li><a href="#">Protección al consumidor</a></li>
+                            <li><a href="#">Defensor del consumidor</a></li>
+                            <li><a href="#">Seguridad bancaria</a></li>
+                            <li><a href="#">Disponibilidad en canales</a></li>
+                            <li><a href="#">Autogestión</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="footer-column">
+                        <h4>Beneficios</h4>
+                        <ul>
+                            <li><a href="#">Alianzas Banco de Bogotá</a></li>
+                            <li><a href="#">Programa de lealtad Tuplus</a></li>
+                            <li><a href="#">Asistencias</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Información -->
+                    <div class="footer-column">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Tasas y tarifas</a></li>
+                            <li><a href="#">Nuestras bancas</a></li>
+                            <li><a href="#">Sostenibilidad</a></li>
+                            <li><a href="#">Nuestra organización</a></li>
+                            <li><a href="#">Educación financiera</a></li>
+                            <li><a href="#">Pago de impuestos</a></li>
+                            <li><a href="#">Investigaciones económicas</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="#">Servílíneas</a></li>
+                            <li><a href="#">Oficinas</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                        
+                        <!-- Dropdown de Filiales y Agencias -->
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn" id="filialesBtn">
+                                Filiales y Agencias
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="filialesDropdown">
+                                <a href="#">Banco de Bogotá Panamá</a>
+                                <a href="#">Banco de Bogotá Miami</a>
+                                <a href="#">Banco de Bogotá España</a>
+                                <a href="#">Fiduciaria Bogotá</a>
+                                <a href="#">Porvenir</a>
+                                <a href="#">Corficolombiana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de redes sociales y logos -->
+        <div class="social-section">
+            <div class="container">
+                <div class="social-content">
+                    <!-- Redes sociales -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos de entidades -->
+                    <div class="entity-logos">
+                        <div class="logo-item">
+                            <span class="logo-text">VIGILADO</span>
+                            <span class="logo-subtext">SUPERINTENDENCIA FINANCIERA DE COLOMBIA</span>
+                        </div>
+                        <div class="logo-item aval">
+                            <span class="logo-text">Grupo</span>
+                            <strong class="logo-brand">AVAL</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección final con el nombre del banco -->
+        <div class="bank-name-section">
+            <div class="container">
+                <h2 class="bank-name">Banco de Bogotá</h2>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </main>
+
+    <script src="PQRS.js"></script>
+</body>
+</html>
